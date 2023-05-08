@@ -29,6 +29,21 @@ export default class CrudAluno extends Component {
         })
     }
 
+    limpar(){
+        this.setState({ aluno: initialState.aluno })
+    }
+
+    salvar(){
+        const aluno = this.state.aluno
+        aluno.codCurso = Number(aluno.codCurso)
+        const metodo = 'post'
+
+        axios[metodo](urlAPI, aluno).then(resp =>{
+            const lista = this.getListaAtualizada(resp.data)
+            this.setState({ aluno: initialState.aluno, lista })
+        })
+    }
+
     renderTable() {
         return (
             <div className="listagem">
