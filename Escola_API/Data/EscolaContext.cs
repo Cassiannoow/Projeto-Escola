@@ -16,7 +16,8 @@ namespace Escola_API.Data
             options.UseSqlServer(Configuration.GetConnectionString("StringConexaoSQLServer"));
         }
 
-        public DbSet<Aluno> Aluno {get; set;}
-        public DbSet<Curso> Curso { get; set; }
+        public DbSet<Aluno>? Aluno {get; set;}
+        public DbSet<Curso>? Curso { get; set; }
+        public DbSet<User>? Usuario { get; set; }
     }
 }
