@@ -28,7 +28,7 @@ export default class CrudCursos extends Component {
         const curso = this.state.curso
         curso.codCurso = Number(curso.codCurso)
         const metodo = curso.id ? 'put' : 'post';
-        const url = curso.id ? `${urlAPI}/${metodo}/${curso.id}` : urlAPI + "/post";
+        const url = curso.id ? `${urlAPI}/${metodo}/${curso.id}` : urlAPI + `/${metodo}`;
 
         axios[metodo](url, curso).then(resp =>{
             const lista = this.getListaAtualizada(resp.data)
@@ -126,6 +126,8 @@ export default class CrudCursos extends Component {
                             <th className="tabTituloCodCurso">Código</th>
                             <th className="tabTituloNomeCurso">Nome do Curso</th>
                             <th className="tabTituloPeriodoCurso">Periodo</th>
+                            <th>Alterar</th>
+                            <th>Excluir</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -135,6 +137,16 @@ export default class CrudCursos extends Component {
                                 <td>{curso.codCurso}</td>
                                 <td>{curso.nomeCurso}</td>
                                 <td>{curso.periodo}</td>
+                                <td>
+                                    <button onClick={() => this.carregar(curso)} >
+                                        Altera
+                                    </button>
+                                </td>
+                                <td>
+                                    <button onClick={() => this.remover(curso)} >
+                                        Remove
+                                    </button>
+                                </td>
                             </tr>
                         )}
                     </tbody>

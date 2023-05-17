@@ -151,3 +151,4 @@ C:\Users\u22138\Documents\GitHub\Projeto-Escola\Escola_API\obj\Debug\net7.0\Esco
 C:\Users\u22138\Documents\GitHub\Projeto-Escola\Escola_API\obj\Debug\net7.0\Escola_API.genruntimeconfig.cache
 C:\Users\u22138\Documents\GitHub\Projeto-Escola\Escola_API\obj\Debug\net7.0\ref\Escola_API.dll
 C:\Users\u22138\Documents\GitHub\Projeto-Escola\Escola_API\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Documentos\GitHub\Projeto-Escola\Escola_API\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
